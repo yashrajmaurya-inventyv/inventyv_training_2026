@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <!-- Left side: Logo + description -->
+      <section class="side side-left">
+        <div class="brand">
+          <div class="logo-circle">
+            <img src="https://static.wixstatic.com/media/6f0edd_8a4cadde0406481e9fe3bd10e3910843~mv2.gif" alt="logo">
+          </div>
+          <p class="company-tagline">
+            At Inventyv, we build advanced web and mobile applications using the latest technologies. We're focused on delivering high-quality services that help our clients achieve business goals. Our objective is to solve our clients' business challenges...technology is just a tool.
+          </p>
+        </div>
+      </section>
+
+      <!-- Right side: Auth (login / signup) -->
+      <section class="side side-right">
+        <div class="auth-card">
+          <input
+            type="radio"
+            name="auth-toggle"
+            id="auth-login"
+            class="auth-toggle"
+            checked
+          />
+          <input
+            type="radio"
+            name="auth-toggle"
+            id="auth-signup"
+            class="auth-toggle"
+          />
+
+          <!-- Forms container -->
+          <div class="forms">
+            <!-- Login form -->
+            <form class="form form-login">
+              <h2 class="form-title">Login</h2>
+
+              <div class="form-group">
+                <label for="login-username">Username</label>
+                <input
+                  type="text"
+                  id="login-username"
+                  name="username"
+                  placeholder="Enter your username"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="login-password">Password</label>
+                <input
+                  type="password"
+                  id="login-password"
+                  name="password"
+                  placeholder="Enter your password"
+                  required
+                />
+              </div>
+
+              <a href="#forgot-password">Forgot Password?</a>
+
+              <button type="submit" class="primary-btn">Login</button>
+
+              <p class="switch-text">
+                Don't have an account?
+                <label for="auth-signup" class="switch-link">Sign up</label>
+              </p>
+            </form>
+
+            <!-- Signup form -->
+            <form class="form form-signup">
+              <h2 class="form-title">Sign Up</h2>
+
+              <div class="form-group">
+                <label for="signup-email">Email</label>
+                <input
+                  type="email"
+                  id="signup-email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="signup-username">Username</label>
+                <input
+                  type="text"
+                  id="signup-username"
+                  name="username"
+                  placeholder="Choose a username"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="signup-password">Password</label>
+                <input
+                  type="password"
+                  id="signup-password"
+                  name="password"
+                  placeholder="Create a password"
+                  required
+                />
+              </div>
+
+              <a href="#forgot-password">Forgot Password?</a>
+              <button type="submit" class="primary-btn">Sign Up</button>
+
+              <p class="switch-text">
+                Already have an account?
+                <label for="auth-login" class="switch-link">Login</label>
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+  </html>
+
+
