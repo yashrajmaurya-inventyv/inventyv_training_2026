@@ -90,7 +90,7 @@ pr.then((res) => console.log(res))
 
 ---
 
-## 3) Task-3 (pattern) 🎨
+## 3) Concentric Number Pattern (Distance-Based Minimum) (`pattern.js`) 🎨
 
 **Question:**
 Read an integer `n` from stdin and print a pattern where each cell value is the distance-based minimum (plus one), forming concentric layers from the edges toward the center.
@@ -106,10 +106,14 @@ const rl = readline.createInterface({
 
 rl.question('Enter value of n: ', (input) => {
     for (let i = 1; i <= input; i++) {
+        output = "";
         for (let j = 1; j <= input; j++) {
-            min_val = Math.min(i, j, input - i + 1, input - j + 1);
-            console.log(min_val);
+            min_val = i < j ? i : j;
+            min_val = min_val < input - i + 1 ? min_val : input - i + 1;
+            min_val = min_val < input - j + 1 ? min_val : input - j + 1;
+            output += min_val + " "
         }
+        console.log(output);
     }
     rl.close()
 })
