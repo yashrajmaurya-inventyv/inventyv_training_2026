@@ -49,10 +49,9 @@ This repository contains JavaScript solutions for Exercism coding challenges. Th
 - **vehicle-purchase.js** - Purchase decision logic
 - **windowing-system.js** - Window management system logic
 
-### Service & Helper Files
+### Promises
 
-- **service.js** - Service utilities and helper functions
-
+- **service.js** - Promise exercise (practice with Promises and async/await)
 ## How to Use
 
 Each file contains a specific challenge with function definitions and test cases. Run them individually to verify your solutions work correctly:
