@@ -19,28 +19,28 @@ impl User {
     }
     fn set_active_status(&mut self, val: bool) {
         self.active = val;
-        self.print_structure(self.print_both_structure());
+        self.print_structure(self.get_both_structure());
     }
     fn get_username(&self) -> &str {
         &self.username
     }
     fn set_username(&mut self, val: String) {
         self.username = val;
-        self.print_structure(self.print_both_structure());
+        self.print_structure(self.get_both_structure());
     }
     fn get_email(&self) -> &str {
         &self.email
     }
     fn set_email(&mut self, val: String) {
         self.email = val;
-        self.print_structure(self.print_both_structure());
+        self.print_structure(self.get_both_structure());
     }
     fn get_sign_in_count(&self) -> u64 {
         self.sign_in_count
     }
     fn set_sign_in_count(&mut self, val: u64) {
         self.sign_in_count = val;
-        self.print_structure(self.print_both_structure());
+        self.print_structure(self.get_both_structure());
     }
     fn get_user_info(&self) -> String {
         format!(
@@ -65,12 +65,12 @@ impl User {
     }
     fn set_person_name(&mut self, val: String) {
         self.person.name = val;
-        self.print_structure(self.print_both_structure());
+        self.print_structure(self.get_both_structure());
     }
-    fn print_both_structure(&self) -> String {
+    fn get_both_structure(&self) -> String {
         format!(
             "Original Structure: {:?} \nReference Structure: {:?}",
-            self, *self
+            *self, self
         )
     }
     fn print_structure(&self, str: String) {
