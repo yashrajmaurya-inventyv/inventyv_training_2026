@@ -54,7 +54,6 @@ where
     fn display_all(&self) -> String {
         let mut output = String::new();
         for (id, item) in &self.items {
-            // push_str is generally more efficient than += for Strings
             output.push_str(&format!("ID: {}, Item: {}\n", id, item.display()));
         }
         output
